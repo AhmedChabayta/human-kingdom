@@ -37,7 +37,7 @@ export default function SideItems({
   const currency = Object.values(currencies).map(({ symbol }) => symbol);
 
   return (
-    <div className="space-y-0">
+    <div dir={officialLanguage === "Arabic" ? "rtl" : "ltr"} className="space-y-0">
       <Accordion
         className="GENERAL"
         style={{ borderRadius: "0px" }}
@@ -65,8 +65,11 @@ export default function SideItems({
           <h2>{officialName} </h2>
         </AccordionDetails>
         <AccordionDetails>
-          <span className="font-semibold ">Currency: <span className='font-san-serif  font-black'>{currency}</span></span>
-          <h2>{currencyName}</h2>
+          <span className="font-semibold ">
+            Currency:{" "}
+            <span className="font-san-serif  font-black">{` ${currency} `}</span>
+          </span>
+          <h2>{` ${currencyName} `}</h2>
         </AccordionDetails>
         <AccordionDetails>
           <span className="font-semibold ">Official Native Name:</span>

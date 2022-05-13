@@ -1,10 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import Navbar from './Navbar';
 import Thumbnail from "./Thumbnail";
 
 function CountriesGrid({ countries, flags }) {
   return (
     <div>
+      <Navbar />
       <div className="flex relative">
         <img
           className="brightness-80"
