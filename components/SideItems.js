@@ -33,11 +33,18 @@ export default function SideItems({
   const UN_logo_URL =
     "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpngimg.com%2Fuploads%2Fun%2Fun_PNG20.png&f=1&nofb=1";
 
-  const currencyName = Object.values(currencies).map(({ name }) => name);
-  const currency = Object.values(currencies).map(({ symbol }) => symbol);
+  const currencyName = currencies
+    ? Object.values(currencies).map(({ name }) => name)
+    : " - ";
+  const currency = currencies
+    ? Object.values(currencies).map(({ symbol }) => symbol)
+    : "";
 
   return (
-    <div dir={officialLanguage === "Arabic" ? "rtl" : "ltr"} className="space-y-0">
+    <div
+      dir={officialLanguage === "Arabic" ? "rtl" : "ltr"}
+      className="space-y-0"
+    >
       <Accordion
         className="GENERAL"
         style={{ borderRadius: "0px" }}
