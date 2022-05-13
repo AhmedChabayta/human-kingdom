@@ -10,7 +10,7 @@ function Thumbnail({ names, flags, language }) {
       <Link href={`/Countries/${common}`}>
         <a className="cursor-pointer flex flex-col object-contain">
           <img src={flags.svg} alt={flags.common} title={names.common} />
-          <h1 className="hidden group-hover:flex">{names.official}</h1>
+          <h1 className="flex">{names.official}</h1>
         </a>
       </Link>
     </div>
