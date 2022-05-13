@@ -1,8 +1,7 @@
 import axios from "axios";
 import { useRouter } from "next/router";
-import React from "react";
-import Details from "./Details";
-import Sidebar from "./Sidebar";
+import Details from "../../components/Details";
+import Sidebar from "../../components/Sidebar";
 
 function Countries({ country }) {
   const countries = country.map((country) => country);
