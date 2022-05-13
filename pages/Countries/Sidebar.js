@@ -21,10 +21,9 @@ function Sidebar({
   continents,
   coatOfArms,
 }) {
-  console.log(timezones);
 
   return (
-    <div className="flex flex-col h-full min-w-[20vw] overflow-scroll pl-5">
+    <div className="flex flex-col h-full w-[50vw] overflow-scroll pl-5">
       <Link href="/">
         <a className="p-2 cursor-pointer hover:underline">Home</a>
       </Link>

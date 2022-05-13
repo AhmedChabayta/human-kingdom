@@ -10,10 +10,6 @@ export default function Home({ data }) {
   return <CountriesGrid countries={countries} />;
 }
 
-
-
-
-
 export const getStaticProps = async () => {
   const res = await fetch(`https://restcountries.com/v3.1/all`);
   const data = await res.json();

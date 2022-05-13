@@ -5,13 +5,13 @@ function Details({ flags }) {
     <div className="flex overflow-x-scroll snap-mandatory snap-x p-10 scrollbar-hide">
       <div className="w-[80vw] flex flex-col flex-shrink-0 h-full snap-start">
         <div className="flex flex-col justify-center items-center">
-          <h1 className="inline-flex self-start text-5xl p-2 italic font-serif">
+          <h1 className="inline-flex self-start text-5xl p-2 italic font-serif pl-10">
             People
           </h1>
           <img className="pb-5 w-1/2 object-contain" src={flags.svg} alt="" />
         </div>
         <div>
-          <p>
+          <p className="px-20">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
             fugit adipisci vel aut enim officia quaerat, consequatur nulla et
             pariatur autem. Id magni itaque assumenda quam autem animi
@@ -36,13 +36,13 @@ function Details({ flags }) {
 
       <div className="w-[80vw] flex flex-col flex-shrink-0 h-full snap-start">
         <div className="flex flex-col justify-center items-center">
-          <h1 className="inline-flex self-start text-5xl p-2 italic font-serif">
+          <h1 className="inline-flex self-start text-5xl p-2 italic font-serif pl-10">
             Culture
           </h1>
           <img className="pb-5 w-1/2 object-contain" src={flags.svg} alt="" />
         </div>
         <div>
-          <p>
+          <p className="px-20">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
             fugit adipisci vel aut enim officia quaerat, consequatur nulla et
             pariatur autem. Id magni itaque assumenda quam autem animi

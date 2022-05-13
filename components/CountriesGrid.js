@@ -3,7 +3,7 @@ import Thumbnail from "./Thumbnail";
 
 function CountriesGrid({ countries, flags }) {
   return (
-    <div className="grid grid-cols-5 gap-2 overflow-x-hidden">
+    <div className="grid grid-cols-6 gap-4 overflow-x-hidden h-fit">
       {countries.map((country, i) => (
         <Thumbnail
           key={i}

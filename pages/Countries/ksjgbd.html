@@ -1,16 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti fugit adipisci vel aut enim officia quaerat, consequatur nulla et pariatur autem. Id magni itaque assumenda quam autem animi repellendus accusamus.
-    At ratione optio quae, fugit eligendi et aliquid adipisci aperiam esse, dolorum temporibus! Aliquam expedita eum fuga exercitationem aut eligendi iste enim soluta, nostrum ducimus eveniet alias maxime, est veritatis.
-    Necessitatibus assumenda similique quisquam, mollitia corporis enim tenetur architecto sed dignissimos nemo numquam non at rerum corrupti dolorum cupiditate deserunt neque ex odio commodi! Qui quisquam dolorum molestias earum hic!
-    Maiores deserunt harum iure illum excepturi mollitia aliquid nesciunt eos pariatur, voluptates quos, adipisci unde blanditiis! Optio ullam nobis magnam quod in? Minus veritatis voluptatum beatae dolorem quibusdam, quidem tenetur!
-    Ratione, quos deserunt? Odio illo nobis et maxime enim quaerat quidem architecto, consectetur doloribus, temporibus quis sit dicta. Consectetur sunt nemo quam blanditiis, quidem quas exercitationem neque aut architecto maxime?
-</body>
-</html>
+<div><Autocomplete
+
+                id="free-solo-2-demo"
+                options={posts.map(option => option.title)}
+                renderOption={(option) => {
+             
+                    const post = posts.filter(element => element.title === option.key)[0]
+
+                    return (<li key={option.key}>
+                        <Link href={`/category/${post.category}/posts/${post.slug}`} passHref>
+                            <a className="hover:underline hover:text-blue-500">- {option.key} </a>
+                        </Link>
+                    </li>)
+                }}
+                renderInput={(params) => (
+                    <TextField
+                        {...params}
+                        label="Search articles"
+                        InputProps={{
+                            ...params.InputProps,
+                            type: 'search',
+
+                        }}
+                    />
+                    </div>

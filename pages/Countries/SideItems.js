@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import * as React from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -27,8 +28,10 @@ export default function SideItems({
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
-  console.log(officialLanguage);
   const UN = unMember.toString();
+
+  const UN_logo_URL =
+    "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpngimg.com%2Fuploads%2Fun%2Fun_PNG20.png&f=1&nofb=1";
 
   return (
     <div className="">
@@ -128,16 +131,16 @@ export default function SideItems({
           <h1 className="font-bold">Status</h1>
         </AccordionSummary>
         <AccordionDetails>
-          <span className="font-semibold "></span>
-          <h2>Independence: {status}</h2>
+          <span className="font-semibold ">Independence:</span>
+          <h2> {status}</h2>
         </AccordionDetails>
         <AccordionDetails>
-          <span className="font-semibold "></span>
-          <h2>UN Member: {UN}</h2>
+          <span className="font-semibold ">UN Member:</span>
+          <h2>{UN ? <img src={UN_logo_URL} alt="" /> : ""}</h2>
         </AccordionDetails>
         <AccordionDetails>
-          <span className="font-semibold "></span>
-          <h2>Independence: {status}</h2>
+          <span className="font-semibold ">Independence:</span>
+          <h2> {status}</h2>
         </AccordionDetails>
         <AccordionDetails>
           <img src={coatOfArms.svg} alt="" />
