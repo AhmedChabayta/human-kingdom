@@ -4,7 +4,7 @@ import Sidebar from "./Sidebar";
 
 function Layout({ children }) {
   return (
-    <div className="">
+    <div className="bg-black h-[100%] w-[100%] text-white">
       <header>
         <Navbar />
       </header>

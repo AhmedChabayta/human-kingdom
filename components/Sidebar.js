@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import SideItems from "./SideItems";
 
 function Sidebar({
@@ -20,6 +20,7 @@ function Sidebar({
   unMember,
   continents,
   coatOfArms,
+  currencies,
 }) {
   return (
     <div className="flex flex-col h-full w-[50vw] overflow-scroll pl-5">
@@ -44,6 +45,7 @@ function Sidebar({
         unMember={unMember}
         continents={continents}
         coatOfArms={coatOfArms}
+        currencies={currencies}
       />
     </div>
   );

@@ -23,19 +23,23 @@ export default function SideItems({
   unMember,
   continents,
   coatOfArms,
+  currencies,
 }) {
   const [expanded, setExpanded] = React.useState(false);
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
   const UN = unMember.toString();
-
   const UN_logo_URL =
     "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpngimg.com%2Fuploads%2Fun%2Fun_PNG20.png&f=1&nofb=1";
 
+  const currencyName = Object.values(currencies).map(({ name }) => name);
+  const currency = Object.values(currencies).map(({ symbol }) => symbol);
+
   return (
-    <div className="">
+    <div className="space-y-0">
       <Accordion
+        className="GENERAL"
         style={{ borderRadius: "0px" }}
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
@@ -61,6 +65,10 @@ export default function SideItems({
           <h2>{officialName} </h2>
         </AccordionDetails>
         <AccordionDetails>
+          <span className="font-semibold ">Currency: <span className='font-san-serif  font-black'>{currency}</span></span>
+          <h2>{currencyName}</h2>
+        </AccordionDetails>
+        <AccordionDetails>
           <span className="font-semibold ">Official Native Name:</span>
           <h2> {officialNativeName} </h2>
         </AccordionDetails>
@@ -84,6 +92,7 @@ export default function SideItems({
       </Accordion>
 
       <Accordion
+        style={{ borderRadius: "0px" }}
         expanded={expanded === "panel2"}
         onChange={handleChange("panel2")}
       >
@@ -108,7 +117,7 @@ export default function SideItems({
         </AccordionDetails>
         <AccordionDetails>
           <span className="font-semibold ">Borders: </span>
-          <h2>{borders} </h2>
+          {` ${borders} `}
         </AccordionDetails>
         <AccordionDetails>
           <span className="font-semibold ">Population: </span>
@@ -120,6 +129,7 @@ export default function SideItems({
         </AccordionDetails>
       </Accordion>
       <Accordion
+        style={{ borderRadius: "0px" }}
         expanded={expanded === "panel3"}
         onChange={handleChange("panel3")}
       >

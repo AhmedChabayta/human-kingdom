@@ -28,9 +28,11 @@ function Countries({ country }) {
           unMember,
           continents,
           coatOfArms,
+          currencies,
         }) => (
           <div className="flex justify-between" key={name.official}>
             <Sidebar
+              currencies={currencies}
               area={area}
               status={status}
               flags={flags}
