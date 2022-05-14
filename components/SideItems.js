@@ -40,6 +40,7 @@ export default function SideItems({
     ? Object.values(currencies).map(({ symbol }) => symbol)
     : "";
 
+  const border = borders ? borders : "none";
   return (
     <div
       dir={officialLanguage === "Arabic" ? "rtl" : "ltr"}
@@ -102,6 +103,7 @@ export default function SideItems({
       </Accordion>
 
       <Accordion
+        className="GEOGRAPHICS"
         style={{ borderRadius: "0px" }}
         expanded={expanded === "panel2"}
         onChange={handleChange("panel2")}
@@ -127,7 +129,7 @@ export default function SideItems({
         </AccordionDetails>
         <AccordionDetails>
           <span className="font-semibold ">Borders: </span>
-          {` ${borders} `}
+          {` ${border} `}
         </AccordionDetails>
         <AccordionDetails>
           <span className="font-semibold ">Population: </span>
@@ -135,7 +137,7 @@ export default function SideItems({
         </AccordionDetails>
         <AccordionDetails>
           <span className="font-semibold ">TimeZone: </span>
-          <h2>{timezones}</h2>
+          <h2 className="break-words">{` ${timezones} `}</h2>
         </AccordionDetails>
       </Accordion>
       <Accordion
