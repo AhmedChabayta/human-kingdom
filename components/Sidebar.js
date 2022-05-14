@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import React, { useState } from "react";
+import Search from "./Search";
 import SideItems from "./SideItems";
 
 function Sidebar({
@@ -21,7 +22,9 @@ function Sidebar({
   continents,
   coatOfArms,
   currencies,
+  query,
 }) {
+  console.log(name);
   return (
     <div className="flex flex-col h-[100vh] w-[20vw] min-w-[20vw] overflow-hidden ">
       <Link href="/">
@@ -30,6 +33,7 @@ function Sidebar({
       <span className="shadow-2xl">
         <img className="shadow-2xl" src={flags.svg} alt="" />
       </span>
+      <Search name={query} />
       <SideItems
         officialLanguage={language}
         population={population}

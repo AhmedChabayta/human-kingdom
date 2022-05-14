@@ -3,10 +3,12 @@ import { useRouter } from "next/router";
 import Details from "../../components/Details";
 import Sidebar from "../../components/Sidebar";
 
-function Countries({ country }) {
+function Countries({ country, namesData }) {
   const countries = country.map((country) => country);
   const router = useRouter();
   const common = router.query.common;
+  const query = namesData.map((name) => name.name);
+  console.log(query);
 
   return (
     <div className="">
@@ -32,6 +34,7 @@ function Countries({ country }) {
         }) => (
           <div className="flex overflow-hidden h-screen" key={name.official}>
             <Sidebar
+              query={query}
               currencies={currencies}
               area={area}
               status={status}
@@ -224,10 +227,13 @@ export default Countries;
 export const getStaticProps = async (context) => {
   const common = context.params.common;
   const res = await fetch(`https://restcountries.com/v3.1/name/${common}`);
-  const data = await res.json();
+  const country = await res.json();
+  const resNames = await fetch(`https://restcountries.com/v3.1/all`);
+  const namesData = await resNames.json();
   return {
     props: {
-      country: data,
+      country,
+      namesData,
     },
   };
 };
