@@ -1,9 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 
 function Details({ flags }) {
   return (
-    <div className="flex overflow-x-scroll snap-mandatory snap-x p-10 scrollbar-hide">
-      <div className="w-[80vw] flex flex-col flex-shrink-0 h-full snap-start">
+    <div className="flex overflow-x-scroll h-full snap-mandatory snap-x p-10 scrollbar-hide">
+      <div className="w-[80vw] flex flex-col flex-shrink-0 snap-start">
         <div className="flex flex-col justify-center items-center">
           <h1 className="inline-flex self-start text-5xl p-2 italic font-serif pl-10">
             People

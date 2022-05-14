@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
+import dynamic from "next/dynamic";
 import React from "react";
-import Navbar from './Navbar';
+import Navbar from "./Navbar";
 import Thumbnail from "./Thumbnail";
 
 function CountriesGrid({ countries, flags }) {
@@ -15,7 +16,7 @@ function CountriesGrid({ countries, flags }) {
         />
         <div className="bg-gradient-to-t from-black absolute w-screen h-20 bottom-0" />
       </div>
-      <div className="grid grid-cols-6 gap-4 overflow-x-hidden h-fit">
+      <div className="flex md:grid flex-col md:grid-cols-4 lg:grid-cols-6 gap-4 overflow-x-hidden h-fit">
         {countries.map((country, i) => (
           <Thumbnail
             key={i}

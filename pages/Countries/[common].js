@@ -30,7 +30,7 @@ function Countries({ country }) {
           coatOfArms,
           currencies,
         }) => (
-          <div className="flex justify-between" key={name.official}>
+          <div className="flex overflow-hidden h-screen" key={name.official}>
             <Sidebar
               currencies={currencies}
               area={area}

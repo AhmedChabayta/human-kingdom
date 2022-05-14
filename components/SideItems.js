@@ -42,10 +42,7 @@ export default function SideItems({
 
   const border = borders ? borders : "none";
   return (
-    <div
-      dir={officialLanguage === "Arabic" ? "rtl" : "ltr"}
-      className="space-y-0"
-    >
+    <div className="flex flex-col overflow-scroll h-screen m-0">
       <Accordion
         className="GENERAL"
         style={{ borderRadius: "0px" }}
@@ -60,51 +57,58 @@ export default function SideItems({
           <span className="font-semibold "></span>
           <h2 className="font-bold">General Information</h2>
         </AccordionSummary>
-        <AccordionDetails>
-          <span className="font-semibold ">Population:</span>
-          <h2> {population}</h2>
-        </AccordionDetails>
-        <AccordionDetails>
-          <span className="font-semibold ">Official Language:</span>
-          <h2> {officialLanguage} </h2>
-        </AccordionDetails>
-        <AccordionDetails>
-          <span className="font-semibold ">Official Name: </span>
-          <h2>{officialName} </h2>
-        </AccordionDetails>
-        <AccordionDetails>
-          <span className="font-semibold ">
-            Currency:{" "}
-            <span className="font-san-serif  font-black">{` ${currency} `}</span>
-          </span>
-          <h2>{` ${currencyName} `}</h2>
-        </AccordionDetails>
-        <AccordionDetails>
-          <span className="font-semibold ">Official Native Name:</span>
-          <h2> {officialNativeName} </h2>
-        </AccordionDetails>
-        <AccordionDetails>
-          <span className="font-semibold ">Common Native Name: </span>
-          <h2>{commonNativeName} </h2>
-        </AccordionDetails>
-        <AccordionDetails>
-          <span className="font-semibold ">Continent: </span>
-          <h2>{continents} </h2>
-        </AccordionDetails>
-        <AccordionDetails>
-          <span className="font-semibold ">Capital:</span>
-          <h2> {capital} </h2>
-        </AccordionDetails>
+        <span>
+          <AccordionDetails>
+            <span className="font-semibold ">Population:</span>
+            <h2> {population}</h2>
+          </AccordionDetails>
+          <AccordionDetails>
+            <span className="font-semibold ">Official Language:</span>
+            <h2> {officialLanguage} </h2>
+          </AccordionDetails>
+          <AccordionDetails>
+            <span className="font-semibold ">Official Name: </span>
+            <h2>{officialName} </h2>
+          </AccordionDetails>
+          <AccordionDetails>
+            <span className="font-semibold ">
+              Currency:{" "}
+              <span className="font-san-serif  font-black">{` ${currency} `}</span>
+            </span>
+            <h2>{` ${currencyName} `}</h2>
+          </AccordionDetails>
+          <AccordionDetails>
+            <span className="font-semibold ">Official Native Name:</span>
+            <h2 dir={officialLanguage === "Arabic" ? "rtl" : "ltr"}>
+              {" "}
+              {officialNativeName}{" "}
+            </h2>
+          </AccordionDetails>
+          <AccordionDetails>
+            <span className="font-semibold ">Common Native Name: </span>
+            <h2 dir={officialLanguage === "Arabic" ? "rtl" : "ltr"}>
+              {commonNativeName}{" "}
+            </h2>
+          </AccordionDetails>
+          <AccordionDetails>
+            <span className="font-semibold ">Continent: </span>
+            <h2>{continents} </h2>
+          </AccordionDetails>
+          <AccordionDetails>
+            <span className="font-semibold ">Capital:</span>
+            <h2> {capital} </h2>
+          </AccordionDetails>
 
-        <AccordionDetails>
-          <span className="font-semibold ">Start of week:</span>
-          <h2> {startOfWeek} </h2>
-        </AccordionDetails>
+          <AccordionDetails>
+            <span className="font-semibold ">Start of week:</span>
+            <h2> {startOfWeek} </h2>
+          </AccordionDetails>
+        </span>
       </Accordion>
 
       <Accordion
         className="GEOGRAPHICS"
-        style={{ borderRadius: "0px" }}
+        style={{ borderRadius: 0 }}
         expanded={expanded === "panel2"}
         onChange={handleChange("panel2")}
       >

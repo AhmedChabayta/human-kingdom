@@ -23,11 +23,13 @@ function Sidebar({
   currencies,
 }) {
   return (
-    <div className="flex flex-col h-full w-[50vw] overflow-scroll pl-5">
+    <div className="flex flex-col h-[100vh] w-[20vw] min-w-[20vw] overflow-hidden ">
       <Link href="/">
         <a className="p-2 cursor-pointer hover:underline">Home</a>
       </Link>
-      <img src={flags.svg} alt="" />
+      <span className="shadow-2xl">
+        <img className="shadow-2xl" src={flags.svg} alt="" />
+      </span>
       <SideItems
         officialLanguage={language}
         population={population}
