@@ -22,14 +22,13 @@ function RandomHistoryFact({ data }) {
   const entries = fact
     ? facts.map((entry, i) => (
         <div className="inline-flex flex-col" key={i}>
-          <span className='inline-flex'>{entry.year}</span>
+          <span className="inline-flex">{entry.year}</span>
           <div>
             <p>{entry.text}</p>
           </div>
         </div>
       ))
     : null;
-  const year = facts.map((year) => year.year);
   return (
     <div className="flex flex-col p-5">
       <span className="text-3xl font-normal">
