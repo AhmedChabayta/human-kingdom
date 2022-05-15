@@ -11,6 +11,7 @@ export default function Home({ data }) {
         <RandomHistoryFact />
       </div>
       <Widgets />
+      
     </div>
   );
 }

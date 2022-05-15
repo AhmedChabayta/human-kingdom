@@ -1,27 +1,29 @@
 /* eslint-disable @next/next/no-img-element */
-import { Autocomplete, TextField } from "@mui/material";
+import { Autocomplete, createFilterOptions, TextField } from "@mui/material";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-function Search({ name, names, flags }) {
-  const [search, setSearch] = useState([{}]);
 
-  const native = names.nativeName;
+function Search({ name, names, flags }) {
   return (
     <div className="text-white">
       <Autocomplete
-        variant="outlined"
+        style={{ backgroundColor: "white" }}
+        variant="standard"
         elevation={0}
         id="free-solo-2-demo"
         options={name.map((option) => option.common)}
         renderOption={(option, i) => {
           return (
-            <div key={i} className="bg-transparent text-black w-full">
+            <div
+              key={i}
+              className="bg-transparent items-start text-black w-full hover:bg-blue-400 hover:text-white p-5"
+            >
               <Link href={`/Countries/${option.key}`}>
-                <div className="flex items-center h-10 cursor-pointer">
+                <div className="flex flex-col cursor-pointer">
                   <li className="list-none group">
-                    <span className=" p-5">
-                      <a className="">{option.key}</a>
+                    <span className="break-words text-left">
+                      <a className="text-center">{option.key}</a>
                     </span>
                   </li>
                 </div>
@@ -35,7 +37,7 @@ function Search({ name, names, flags }) {
               placeholder={`${names.official} ...`}
               variant="outlined"
               sx={{
-                backgroundColor: "#ffffff",
+                backgroundColor: "white",
                 textAlign: "center",
                 display: "flex",
                 width: "full",
@@ -49,7 +51,6 @@ function Search({ name, names, flags }) {
                 },
                 "& .MuiOutlinedInput-root:hover": {
                   "& > fieldset": {
-                    borderColor: "transparent",
                     border: 0,
                     outline: "none",
                   },

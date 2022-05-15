@@ -23,7 +23,10 @@ export default function DateWidget() {
   const Day = day.getDate();
   const name = month[day.getMonth()];
   return (
-    <div className="flex p-5 object-contain w-[15rem] justify-between items-center">
+    <div
+      draggable="false"
+      className="flex p-5 object-contain w-[15rem] justify-between items-center"
+    >
       <p className="text-[80px]">{Day}</p>
       <div>
         <div className="flex flex-col items-center">

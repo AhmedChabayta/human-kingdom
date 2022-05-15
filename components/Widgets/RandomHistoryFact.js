@@ -21,18 +21,19 @@ function RandomHistoryFact({ data }) {
   const facts = fact ? fact.events : null;
   const entries = fact
     ? facts.map((entry, i) => (
-        <div className="flex flex-col" key={i}>
-          <span>{entry.year}</span>
-          <p>{entry.text}</p>
+        <div className="inline-flex flex-col" key={i}>
+          <span className='inline-flex'>{entry.year}</span>
+          <div>
+            <p>{entry.text}</p>
+          </div>
         </div>
       ))
     : null;
+  const year = facts.map((year) => year.year);
   return (
     <div className="flex flex-col p-5">
-      <span className="flex ">
-        <button className="text-4xl">Today in History: </button>
-      </span>
       <span className="text-3xl font-normal">
+        <p>Today in History:</p>
         {fact
           ? entries[Math.floor(Math.random() * entries.length - 1)]
           : "Loading"}

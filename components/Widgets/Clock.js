@@ -21,8 +21,9 @@ export default function MyClock() {
   };
 
   return (
-    <div onClick={handleSize} className="flex flex-col justify-center">
+    <div onClick={handleSize} className={`flex flex-col justify-center h-full`}>
       <Clock
+        draggable="false"
         size={size}
         hourHandWidth={3}
         hourMarksWidth={2}

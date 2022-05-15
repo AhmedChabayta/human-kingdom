@@ -24,7 +24,6 @@ function Sidebar({
   currencies,
   query,
 }) {
-  console.log(name);
   return (
     <div className="flex p-2 flex-col h-[100vh] w-[20vw] min-w-[20vw] overflow-hidden ">
       <span className="">
