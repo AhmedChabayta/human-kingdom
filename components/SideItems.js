@@ -1,10 +1,48 @@
 /* eslint-disable @next/next/no-img-element */
 import * as React from "react";
-import Accordion from "@mui/material/Accordion";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import Typography from "@mui/material/Typography";
+import { styled } from "@mui/material/styles";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+
+const Accordion = styled((props) => (
+  <MuiAccordion
+    sx={{ backgroundColor: "transparent" }}
+    disableGutters
+    {...props}
+  />
+))(({ theme }) => ({
+  "&:not(:last-child)": {
+    borderBottom: 0,
+  },
+  "&:before": {
+    display: "none",
+  },
+}));
+const AccordionSummary = styled((props) => (
+  <MuiAccordionSummary
+    sx={{ color: "black", backgroundColor: "white" }}
+    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+    {...props}
+  />
+))(({ theme }) => ({
+  flexDirection: "row-reverse",
+  "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+    transform: "rotate(90deg)",
+    color: "black",
+  },
+  "& .MuiAccordionSummary-content": {
+    marginLeft: theme.spacing(1),
+  },
+}));
+
+const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  padding: theme.spacing(2),
+  borderTop: 0,
+  color: "black",
+}));
 
 export default function SideItems({
   officialLanguage,
@@ -26,6 +64,7 @@ export default function SideItems({
   currencies,
 }) {
   const [expanded, setExpanded] = React.useState(false);
+  const [forcedExpand, setForcedExpand] = React.useState(true);
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
@@ -44,8 +83,10 @@ export default function SideItems({
   return (
     <div className="flex flex-col overflow-scroll h-screen m-0">
       <Accordion
+        defaultExpanded={true}
+        elevation={0}
         className="GENERAL"
-        style={{ borderRadius: "0px" }}
+        style={{ borderRadius: "0px", border: 0 }}
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
       >
@@ -107,6 +148,7 @@ export default function SideItems({
       </Accordion>
 
       <Accordion
+        elevation={0}
         className="GEOGRAPHICS"
         style={{ borderRadius: 0 }}
         expanded={expanded === "panel2"}
@@ -145,6 +187,7 @@ export default function SideItems({
         </AccordionDetails>
       </Accordion>
       <Accordion
+        elevation={0}
         style={{ borderRadius: "0px" }}
         expanded={expanded === "panel3"}
         onChange={handleChange("panel3")}

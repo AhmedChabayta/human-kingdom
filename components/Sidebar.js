@@ -27,13 +27,10 @@ function Sidebar({
   console.log(name);
   return (
     <div className="flex flex-col h-[100vh] w-[20vw] min-w-[20vw] overflow-hidden ">
-      <Link href="/">
-        <a className="p-2 cursor-pointer hover:underline">Home</a>
-      </Link>
-      <span className="shadow-2xl">
-        <img className="shadow-2xl" src={flags.svg} alt="" />
+      <span className="">
+        <img className="" src={flags.svg} alt="" />
       </span>
-      <Search name={query} />
+      <Search names={name} name={query} />
       <SideItems
         officialLanguage={language}
         population={population}

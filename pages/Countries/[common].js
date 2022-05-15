@@ -8,7 +8,6 @@ function Countries({ country, namesData }) {
   const router = useRouter();
   const common = router.query.common;
   const query = namesData.map((name) => name.name);
-  console.log(query);
 
   return (
     <div className="">
@@ -215,7 +214,92 @@ function Countries({ country, namesData }) {
               continents={continents}
               coatOfArms={coatOfArms}
             />
-            <Details flags={flags} />
+            <Details
+              nativeName={
+                name.nativeName
+                  ? name.nativeName.ara ||
+                    name.nativeName.spa ||
+                    name.nativeName.eng ||
+                    name.nativeName.ukr ||
+                    name.nativeName.grn ||
+                    name.nativeName.grn ||
+                    name.nativeName.fra ||
+                    name.nativeName.cha ||
+                    name.nativeName.kat ||
+                    name.nativeName.bjz ||
+                    name.nativeName.por ||
+                    name.nativeName.mon ||
+                    name.nativeName.zho ||
+                    name.nativeName.bar ||
+                    name.nativeName.dan ||
+                    name.nativeName.cal ||
+                    name.nativeName.ell ||
+                    name.nativeName.rus ||
+                    name.nativeName.ben ||
+                    name.nativeName.afr ||
+                    name.nativeName.hrv ||
+                    name.nativeName.isl ||
+                    name.nativeName.swe ||
+                    name.nativeName.nor ||
+                    name.nativeName.khm ||
+                    name.nativeName.mkd ||
+                    name.nativeName.fas ||
+                    name.nativeName.cat ||
+                    name.nativeName.sqi ||
+                    name.nativeName.pol ||
+                    name.nativeName.amh ||
+                    name.nativeName.deu ||
+                    name.nativeName.aze ||
+                    name.nativeName.nld ||
+                    name.nativeName.nep ||
+                    name.nativeName.kir ||
+                    name.nativeName.ita ||
+                    name.nativeName.dzo ||
+                    name.nativeName.nno ||
+                    name.nativeName.lit ||
+                    name.nativeName.ber ||
+                    name.nativeName.kaz ||
+                    name.nativeName.slk ||
+                    name.nativeName.lav ||
+                    name.nativeName.prs ||
+                    name.nativeName.srp ||
+                    name.nativeName.bis ||
+                    name.nativeName.bos ||
+                    name.nativeName.aym ||
+                    name.nativeName.tha ||
+                    name.nativeName.kor ||
+                    name.nativeName.hye ||
+                    name.nativeName.ces ||
+                    name.nativeName.mya ||
+                    name.nativeName.ron ||
+                    name.nativeName.tur ||
+                    name.nativeName.deu ||
+                    name.nativeName.slv ||
+                    name.nativeName.hun ||
+                    name.nativeName.est ||
+                    name.nativeName.bel ||
+                    name.nativeName.sin ||
+                    name.nativeName.vie ||
+                    name.nativeName.cnr ||
+                    name.nativeName.nld ||
+                    name.nativeName.jpn ||
+                    name.nativeName.bul ||
+                    name.nativeName.lao ||
+                    name.nativeName.fin ||
+                    name.nativeName.bwg ||
+                    name.nativeName.kck ||
+                    name.nativeName.kck ||
+                    name.nativeName.khi ||
+                    name.nativeName.div ||
+                    name.nativeName.crs ||
+                    name.nativeName.msa ||
+                    name.nativeName.ind ||
+                    name.nativeName.kal
+                  : ""
+              }
+              flags={flags}
+              name={name}
+            />
           </div>
         )
       )}

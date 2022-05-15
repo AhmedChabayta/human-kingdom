@@ -1,13 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 
-function Details({ flags }) {
+function Details({ flags, name, nativeName }) {
   return (
     <div className="flex overflow-x-scroll h-full snap-mandatory snap-x p-10 scrollbar-hide">
       <div className="w-[80vw] flex flex-col flex-shrink-0 snap-start">
-        <div className="flex flex-col justify-center items-center">
-          <h1 className="inline-flex self-start text-5xl p-2 italic font-serif pl-10">
-            People
+        <div dir="auto" className="flex flex-col justify-center items-center">
+          <h1
+            style={{
+              backgroundImage: `url(${flags.svg})`,
+              backgroundRepeat: "none",
+              backgroundPosition: "center center",
+              backgroundSize: "contain",
+            }}
+            className="inline-flex hover:text-transparent bg-clip-text self-start text-5xl p-5 font-serif
+            pl-10 transition-all duration:200 ease-linear"
+          >
+            {" "}
+            {nativeName.official || name.official}
           </h1>
           <img className="pb-5 w-1/2 object-contain" src={flags.svg} alt="" />
         </div>
