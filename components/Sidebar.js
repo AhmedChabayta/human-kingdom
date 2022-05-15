@@ -26,7 +26,7 @@ function Sidebar({
 }) {
   console.log(name);
   return (
-    <div className="flex flex-col h-[100vh] w-[20vw] min-w-[20vw] overflow-hidden ">
+    <div className="flex p-2 flex-col h-[100vh] w-[20vw] min-w-[20vw] overflow-hidden ">
       <span className="">
         <img className="" src={flags.svg} alt="" />
       </span>
@@ -50,6 +50,10 @@ function Sidebar({
         coatOfArms={coatOfArms}
         currencies={currencies}
       />
+
+      <Link href="/">
+        <a className="flex justify-center text-3xl">Home</a>
+      </Link>
     </div>
   );
 }

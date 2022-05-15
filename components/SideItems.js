@@ -95,53 +95,53 @@ export default function SideItems({
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <span className="font-semibold "></span>
-          <h2 className="font-bold">General Information</h2>
+          <span className=" "></span>
+          <h1 className="">General Information</h1>
         </AccordionSummary>
         <span>
           <AccordionDetails>
-            <span className="font-semibold ">Population:</span>
+            <span className=" ">Population:</span>
             <h2> {population}</h2>
           </AccordionDetails>
           <AccordionDetails>
-            <span className="font-semibold ">Official Language:</span>
+            <span className=" ">Official Language:</span>
             <h2> {officialLanguage} </h2>
           </AccordionDetails>
           <AccordionDetails>
-            <span className="font-semibold ">Official Name: </span>
+            <span className=" ">Official Name: </span>
             <h2>{officialName} </h2>
           </AccordionDetails>
           <AccordionDetails>
-            <span className="font-semibold ">
+            <span className=" ">
               Currency:{" "}
               <span className="font-san-serif  font-black">{` ${currency} `}</span>
             </span>
             <h2>{` ${currencyName} `}</h2>
           </AccordionDetails>
           <AccordionDetails>
-            <span className="font-semibold ">Official Native Name:</span>
+            <span className=" ">Official Native Name:</span>
             <h2 dir={officialLanguage === "Arabic" ? "rtl" : "ltr"}>
               {" "}
               {officialNativeName}{" "}
             </h2>
           </AccordionDetails>
           <AccordionDetails>
-            <span className="font-semibold ">Common Native Name: </span>
+            <span className=" ">Common Native Name: </span>
             <h2 dir={officialLanguage === "Arabic" ? "rtl" : "ltr"}>
               {commonNativeName}{" "}
             </h2>
           </AccordionDetails>
           <AccordionDetails>
-            <span className="font-semibold ">Continent: </span>
+            <span className=" ">Continent: </span>
             <h2>{continents} </h2>
           </AccordionDetails>
           <AccordionDetails>
-            <span className="font-semibold ">Capital:</span>
+            <span className=" ">Capital:</span>
             <h2> {capital} </h2>
           </AccordionDetails>
 
           <AccordionDetails>
-            <span className="font-semibold ">Start of week:</span>
+            <span className=" ">Start of week:</span>
             <h2> {startOfWeek} </h2>
           </AccordionDetails>
         </span>
@@ -159,30 +159,30 @@ export default function SideItems({
           aria-controls="panel2bh-content"
           id="panel2bh-header"
         >
-          <h2 className="font-bold">Geographics</h2>
+          <h1 className="">Geographics</h1>
         </AccordionSummary>
         <AccordionDetails>
-          <span className="font-semibold ">Area:</span>
+          <span className=" ">Area:</span>
           <h2> {area} km^2</h2>
         </AccordionDetails>
         <AccordionDetails>
-          <span className="font-semibold ">Continent:</span>
+          <span className=" ">Continent:</span>
           <h2> {continents} </h2>
         </AccordionDetails>
         <AccordionDetails>
-          <span className="font-semibold ">Subregion:</span>
+          <span className=" ">Subregion:</span>
           <h2> {subregion} </h2>
         </AccordionDetails>
         <AccordionDetails>
-          <span className="font-semibold ">Borders: </span>
-          {` ${border} `}
+          <span className=" ">Borders: </span>
+          <h2> {` ${border} `}</h2>
         </AccordionDetails>
         <AccordionDetails>
-          <span className="font-semibold ">Population: </span>
+          <span className=" ">Population: </span>
           <h2>{population}</h2>
         </AccordionDetails>
         <AccordionDetails>
-          <span className="font-semibold ">TimeZone: </span>
+          <span className=" ">TimeZone: </span>
           <h2 className="break-words">{` ${timezones} `}</h2>
         </AccordionDetails>
       </Accordion>
@@ -197,22 +197,29 @@ export default function SideItems({
           aria-controls="panel3bh-content"
           id="panel3bh-header"
         >
-          <h1 className="font-bold">Status</h1>
+          <h1 className="">Status</h1>
         </AccordionSummary>
         <AccordionDetails>
-          <span className="font-semibold ">Independence:</span>
+          <span className=" ">Independence:</span>
           <h2> {status}</h2>
         </AccordionDetails>
         <AccordionDetails>
-          <span className="font-semibold ">UN Member:</span>
-          <h2>{UN ? <img src={UN_logo_URL} alt="" /> : ""}</h2>
+          <span className="flex place-items-center  ">UN Member:</span>
+          <span className="flex items-center justify-center">
+            {UN ? <img className="w-44" src={UN_logo_URL} alt="" /> : ""}
+          </span>
         </AccordionDetails>
         <AccordionDetails>
-          <span className="font-semibold ">Independence:</span>
+          <span className="flex place-items-center  ">Independence:</span>
           <h2> {status}</h2>
         </AccordionDetails>
         <AccordionDetails>
-          <img src={coatOfArms.svg} alt="" />
+          <span>
+            <h2> Coat of Arms: </h2>
+          </span>
+          <span className="flex items-center justify-center">
+            <img className="w-44" src={coatOfArms.svg} alt="" />
+          </span>
         </AccordionDetails>
       </Accordion>
     </div>

@@ -15,11 +15,7 @@ function Navbar() {
     return () => window.removeEventListener("scroll", transitionNav);
   }, []);
   return (
-    <div
-      className={`w-screen fixed p-5 h-20 z-20 bg-gradient-to-b from-black  flex ${
-        show === false ? "visible" : "invisible"
-      } transition-all duration-200`}
-    >
+    <div className="flex items-center">
       <h1 className="text-5xl font-black">The Human Kingdom</h1>
     </div>
   );

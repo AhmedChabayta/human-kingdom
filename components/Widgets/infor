@@ -1,0 +1,19 @@
+text: "An upsurge in violence in Iraq leaves more than 389 people dead over three days.", pages: (2) […], year: 2013 }
+​​
+pages: Array [ {…}, {…} ]
+​​​
+0: Object { type: "standard", title: "May_2013_Iraq_attacks", displaytitle: "May 2013 Iraq attacks", … }
+​​​
+1: Object { type: "standard", title: "Iraq", displaytitle: "Iraq", … }
+​​​
+length: 2
+​​​
+<prototype>: Array []
+​​
+text: "An upsurge in violence in Iraq leaves more than 389 people dead over three days."
+​​
+year: 2013
+​​
+<prototype>: Object { … }
+​
+1: Object { text: "Jessica Watson becomes the youngest person to sail, non-stop and unassisted around the world solo.", pages:

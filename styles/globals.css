@@ -3,6 +3,19 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap");
+
+@layer base {
+  h2 {
+    @apply font-normal;
+  }
+  h1 {
+    @apply font-black;
+  }
+  span {
+    @apply font-extrabold;
+  }
+}
+
 html,
 body {
   padding: 0;
@@ -18,4 +31,29 @@ a {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.drag-instructions {
+  position: relative;
+  animation: instruct 3s infinite linear alternate-reverse;
+}
+@keyframes instruct {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.native_name {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: transparent;
+}
+.native_name:hover {
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: black;
 }
