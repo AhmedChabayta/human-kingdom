@@ -50,10 +50,6 @@ a {
   }
 }
 
-.native_name {
-  -webkit-text-stroke-width: 0;
-  -webkit-text-stroke-color: transparent;
-}
 .native_name:hover {
   -webkit-text-stroke-width: 0.2px;
   -webkit-text-stroke-color: black;
