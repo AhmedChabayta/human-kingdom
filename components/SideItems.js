@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import * as React from "react";
+import React, { useEffect } from "react";
 import { styled } from "@mui/material/styles";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
@@ -64,7 +64,7 @@ export default function SideItems({
   currencies,
 }) {
   const [expanded, setExpanded] = React.useState(false);
-  const [forcedExpand, setForcedExpand] = React.useState(true);
+  const [cityDetails, setCityDetails] = React.useState([]);
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
@@ -78,7 +78,6 @@ export default function SideItems({
   const currency = currencies
     ? Object.values(currencies).map(({ symbol }) => symbol)
     : "";
-
   const border = borders ? borders : "none";
   return (
     <div className="flex flex-col overflow-scroll h-screen m-0">

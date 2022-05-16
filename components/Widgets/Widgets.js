@@ -1,44 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 import Clock from "./Clock";
 import DateWidget from "./DateWidget";
-import RandomHistoryFact from "./RandomHistoryFact";
-import { Reorder, useDragControls } from "framer-motion";
-import Handle from "./Handle";
 import { NoSsr } from "@mui/material";
+import Weather from "./Weather";
 
 export default function Widgets() {
-  const [items, setItems] = useState([0, 1, 2, 3, 4, 5, 6]);
-
-  const controlsDate = useDragControls();
-  const controlsClock = useDragControls();
   return (
     <div
-      className={`overflow-y-scroll`}
+      className={`overflow-y-scroll overflow-x-hidden flex flex-col h-screen items-center justify-start`}
     >
       <NoSsr>
-        <Reorder.Group axis="y" values={items} onReorder={setItems}>
-          <div className="p-5 flex flex-col items-center h-[90vw]">
-            <Reorder.Item dragListener={false} dragControls={controlsDate}>
-              <div
-                className="w-10 h-10 rounded-full bg-orange-900/10 blur hover:bg-orange-500"
-                onPointerDown={(e) => controlsDate.start(e)}
-              />
-              <DateWidget />
-            </Reorder.Item>
-            <Reorder.Item
-              dragControls={controlsClock}
-              dragListener={false}
-              className=""
-            >
-              <div
-                className="w-10 h-10 rounded-full bg-orange-900/10  blur hover:bg-orange-500"
-                onPointerDown={(e) => controlsClock.start(e)}
-              />
-              <Clock />
-            </Reorder.Item>
-          </div>
-        </Reorder.Group>
+        <div>
+          <DateWidget />
+        </div>
+        <div className="">
+          <Clock />
+        </div>
       </NoSsr>
+      <div>
+        <Weather />
+      </div>
+      {/* <div>
+        <BlackHistory />
+      </div> */}
     </div>
   );
 }

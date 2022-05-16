@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import Clock from "react-clock";
 
 export default function MyClock() {
-  const [size, setSize] = useState(250);
+  const [size, setSize] = useState(150);
+  const [showNumbers, setShowNumbers] = useState(true);
   const [value, setValue] = useState(new Date());
 
   useEffect(() => {
@@ -11,20 +12,24 @@ export default function MyClock() {
       clearInterval(interval);
     };
   }, []);
-
   const handleSize = () => {
-    if (size === 250) {
+    if (size === 150) {
+      setSize(100);
+      setShowNumbers(false);
+      return;
+    } else if (size === 100) {
       setSize(150);
-    } else if (size === 150) {
-      setSize(250);
-    } else return null;
+      setShowNumbers(true);
+      return;
+    } else return;
   };
-
   return (
-    <div onClick={handleSize} className={`flex flex-col justify-center h-full`}>
+    <div
+      onClick={handleSize}
+      className={`flex flex-col justify-center items-center`}
+    >
       <Clock
-        color="white"
-        style={{ ba: "white" }}
+        renderNumbers={showNumbers}
         draggable="false"
         size={size}
         hourHandWidth={3}
@@ -33,7 +38,7 @@ export default function MyClock() {
         minuteHandOppositeLength={20}
         secondHandOppositeLength={0}
         secondHandLength={100}
-        className="rounded-full text-white bg-orange-500"
+        className="rounded-full text-gray-900 bg-orange-500"
         value={value}
       />
     </div>

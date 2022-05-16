@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 
 function Layout({ children }) {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden h-screen">
       <header></header>
       <main className="">{children}</main>
       <footer className="overflow-hidden">
