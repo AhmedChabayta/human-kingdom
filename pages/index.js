@@ -5,13 +5,14 @@ import Widgets from "../components/Widgets/Widgets";
 export default function Home({ data }) {
   // const countries = data.map((country) => country);
   return (
-    <div className="flex justify-between h-screen">
+    <div className="flex min-w-screen h-screen overflow-hidden bg-gray-900">
       <div className="flex flex-col h-full">
         <Enter />
         <RandomHistoryFact />
       </div>
-      <Widgets />
-      
+      <div className="w-[30vw]">
+        <Widgets />
+      </div>
     </div>
   );
 }

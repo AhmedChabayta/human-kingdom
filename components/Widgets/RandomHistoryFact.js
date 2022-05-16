@@ -1,4 +1,5 @@
 import { FactorySharp } from "@mui/icons-material";
+import { Skeleton } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
@@ -17,14 +18,14 @@ function RandomHistoryFact({ data }) {
     }
     getData();
   }, [url]);
-
+  console.log(fact);
   const facts = fact ? fact.events : null;
   const entries = fact
-    ? facts.map((entry, i) => (
-        <div className="inline-flex flex-col" key={i}>
-          <span className="inline-flex">{entry.year}</span>
+    ? facts.map((entry, id) => (
+        <div className="flex flex-col text-white" key={entry.year}>
+          <span className="flex text-orange-500 font-sans">{entry.year}</span>
           <div>
-            <p>{entry.text}</p>
+            <p className="text-6xl font-black font-sans">{entry.text}</p>
           </div>
         </div>
       ))
@@ -32,10 +33,12 @@ function RandomHistoryFact({ data }) {
   return (
     <div className="flex flex-col p-5">
       <span className="text-3xl font-normal">
-        <p>Today in History:</p>
-        {fact
-          ? entries[Math.floor(Math.random() * entries.length - 1)]
-          : "Loading"}
+        <p className="text-white font-bold font-sans">Today in History:</p>
+        {fact ? (
+          entries[Math.floor(Math.random() * entries.length - 1)]
+        ) : (
+          <Skeleton variant="rectangular" width={500} height={500} />
+        )}
       </span>
     </div>
   );

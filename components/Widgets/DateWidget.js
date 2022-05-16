@@ -27,11 +27,13 @@ export default function DateWidget() {
       draggable="false"
       className="flex p-5 object-contain w-[15rem] justify-between items-center"
     >
-      <p className="text-[80px]">{Day}</p>
+      <p className="text-[80px] text-blue-500">{Day}</p>
       <div>
         <div className="flex flex-col items-center">
-          <h1 className="text-[20px]">{time.toLocaleDateString()}</h1>
-          <h1 className="text-[50px]">{name}</h1>
+          <h1 className="text-[20px] text-orange-500">
+            {time.toLocaleDateString()}
+          </h1>
+          <h1 className="text-[50px] text-blue-500">{name}</h1>
         </div>
       </div>
     </div>

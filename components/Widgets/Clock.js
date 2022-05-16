@@ -23,6 +23,8 @@ export default function MyClock() {
   return (
     <div onClick={handleSize} className={`flex flex-col justify-center h-full`}>
       <Clock
+        color="white"
+        style={{ ba: "white" }}
         draggable="false"
         size={size}
         hourHandWidth={3}
@@ -31,7 +33,7 @@ export default function MyClock() {
         minuteHandOppositeLength={20}
         secondHandOppositeLength={0}
         secondHandLength={100}
-        className="rounded-full"
+        className="rounded-full text-white bg-orange-500"
         value={value}
       />
     </div>
