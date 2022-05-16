@@ -18,14 +18,15 @@ function RandomHistoryFact({ data }) {
     }
     getData();
   }, [url]);
-  console.log(fact);
   const facts = fact ? fact.events : null;
   const entries = fact
     ? facts.map((entry, id) => (
         <div className="flex flex-col text-white" key={entry.year}>
           <span className="flex text-orange-500 font-sans">{entry.year}</span>
           <div>
-            <p className="text-6xl font-black font-sans">{entry.text}</p>
+            <p className="text-6xl text-blue-500 font-black font-sans">
+              {entry.text}
+            </p>
           </div>
         </div>
       ))
@@ -33,7 +34,7 @@ function RandomHistoryFact({ data }) {
   return (
     <div className="flex flex-col p-5">
       <span className="text-3xl font-normal">
-        <p className="text-white font-bold font-sans">Today in History:</p>
+        <p className="text-orange-500 font-bold font-sans">Today in History:</p>
         {fact ? (
           entries[Math.floor(Math.random() * entries.length - 1)]
         ) : (

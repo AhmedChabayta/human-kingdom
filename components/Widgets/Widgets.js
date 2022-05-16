@@ -12,10 +12,12 @@ export default function Widgets() {
   const controlsDate = useDragControls();
   const controlsClock = useDragControls();
   return (
-    <div className="overflow-y-scroll">
+    <div
+      className={`overflow-y-scroll`}
+    >
       <NoSsr>
         <Reorder.Group axis="y" values={items} onReorder={setItems}>
-          <div className="space-y-10 p-5 flex flex-col items-center justify-between h-screen">
+          <div className="p-5 flex flex-col items-center h-[90vw]">
             <Reorder.Item dragListener={false} dragControls={controlsDate}>
               <div
                 className="w-10 h-10 rounded-full bg-orange-900/10 blur hover:bg-orange-500"
