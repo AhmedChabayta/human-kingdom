@@ -38,7 +38,7 @@ function RandomHistoryFact({ data }) {
       <div className="text-3xl font-normal">
         <p className="text-white font-bold font-sans">Today in History:</p>
         {fact ? (
-          entries[Math.floor(Math.random() * entries.length - 1)]
+            <p className='py-2'>{entries[Math.floor(Math.random() * entries.length - 1)]}</p>
         ) : (
           <Skeleton variant="rectangular" width={800} height={300} />
         )}

@@ -11,8 +11,7 @@ function InnerPage({ flags, name, nativeName, showInstructions }) {
           backgroundPosition: "center center",
           backgroundSize: "cover",
         }}
-        className="native_name outline-blue-500 inline-flex hover:text-transparent bg-clip-text self-start text-5xl p-5 font-serif
-            pl-10 transition-all duration:200 ease-linear"
+        className="native_name hover:text-transparent bg-clip-text bg-center self-start text-6xl font-serif transition-all duration:200 ease-linear"
       >
         {" "}
         {nativeName.official || name.official}

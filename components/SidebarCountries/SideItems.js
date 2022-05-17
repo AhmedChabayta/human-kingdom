@@ -8,11 +8,7 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 
 const Accordion = styled((props) => (
-  <MuiAccordion
-    sx={{ backgroundColor: "transparent" }}
-    disableGutters
-    {...props}
-  />
+  <MuiAccordion sx={{ backgroundColor: "#111827" }} disableGutters {...props} />
 ))(({ theme }) => ({
   "&:not(:last-child)": {
     borderBottom: 0,
@@ -24,7 +20,12 @@ const Accordion = styled((props) => (
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
     sx={{ color: "rgb(59 130 246)" }}
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+    expandIcon={
+      <ArrowForwardIosSharpIcon
+        className="text-blue-500"
+        sx={{ fontSize: "0.9rem" }}
+      />
+    }
     {...props}
   />
 ))(({ theme }) => ({
@@ -90,7 +91,7 @@ export default function SideItems({
         onChange={handleChange("panel1")}
       >
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={<ExpandMoreIcon className="text-orange-500" />}
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
@@ -119,16 +120,11 @@ export default function SideItems({
           </AccordionDetails>
           <AccordionDetails>
             <span className=" ">Official Native Name:</span>
-            <h2 dir={officialLanguage === "Arabic" ? "rtl" : "ltr"}>
-              {" "}
-              {officialNativeName}{" "}
-            </h2>
+            <h2 dir="auto"> {officialNativeName} </h2>
           </AccordionDetails>
           <AccordionDetails>
             <span className=" ">Common Native Name: </span>
-            <h2 dir={officialLanguage === "Arabic" ? "rtl" : "ltr"}>
-              {commonNativeName}{" "}
-            </h2>
+            <h2 dir="auto">{commonNativeName} </h2>
           </AccordionDetails>
           <AccordionDetails>
             <span className=" ">Continent: </span>
@@ -154,7 +150,7 @@ export default function SideItems({
         onChange={handleChange("panel2")}
       >
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={<ExpandMoreIcon className="text-orange-500" />}
           aria-controls="panel2bh-content"
           id="panel2bh-header"
         >
@@ -192,7 +188,7 @@ export default function SideItems({
         onChange={handleChange("panel3")}
       >
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={<ExpandMoreIcon className="text-orange-500" />}
           aria-controls="panel3bh-content"
           id="panel3bh-header"
         >

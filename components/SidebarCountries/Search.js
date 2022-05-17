@@ -1,14 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
-import { Autocomplete, createFilterOptions, TextField } from "@mui/material";
+import { Autocomplete, TextField } from "@mui/material";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 function Search({ name, names, flags }) {
   return (
-    <div className="text-white">
+    <div className="">
       <Autocomplete
-        style={{ backgroundColor: "white" }}
-        variant="standard"
         elevation={0}
         id="free-solo-2-demo"
         options={name.map((option) => option.common)}
@@ -16,12 +14,12 @@ function Search({ name, names, flags }) {
           return (
             <div
               key={i}
-              className="bg-transparent items-start text-['#3B82F6'] w-full hover:bg-blue-400 hover:text-white p-5"
+              className="bg-gray-900 items-start text-blue-500 w-full h-full hover:bg-blue-400 hover:text-white p-5"
             >
               <Link href={`/Countries/${option.key}`}>
                 <div className="flex flex-col cursor-pointer">
                   <li className="list-none group">
-                    <span className="break-words text-left">
+                    <span className="break-words">
                       <a className="text-center">{option.key}</a>
                     </span>
                   </li>
@@ -36,7 +34,7 @@ function Search({ name, names, flags }) {
               placeholder={`${names.official} ...`}
               variant="outlined"
               sx={{
-                backgroundColor: "#3B82F6",
+                backgroundColor: "#111827",
                 textAlign: "center",
                 display: "flex",
                 width: "full",
@@ -47,11 +45,14 @@ function Search({ name, names, flags }) {
                 "& .MuiOutlinedInput-root": {
                   "& > fieldset": { border: 0 },
                   outline: "none",
+                  backgroundColor: "#111827",
+                  color: "#f97316",
                 },
                 "& .MuiOutlinedInput-root:hover": {
                   "& > fieldset": {
                     border: 0,
                     outline: "none",
+                    border: "orange",
                   },
                 },
               }}

@@ -4,11 +4,13 @@ import DateWidget from "./DateWidget";
 import { NoSsr } from "@mui/material";
 import Weather from "./Weather";
 import BlackHistory from "./BlackHistory";
+import RandomFact from "./RandomFact";
 
 export default function Widgets() {
   return (
     <div
-      className={`overflow-y-scroll overflow-x-hidden flex flex-col h-screen items-center justify-start min-w-[100%]`}
+      className={`overflow-y-scroll overflow-x-hidden flex flex-col h-screen 
+      items-center justify-start min-w-[100%] pb-20 space-y-10`}
     >
       <NoSsr>
         <div className="">
@@ -19,10 +21,10 @@ export default function Widgets() {
         </div>
       </NoSsr>
       <div className="">
-        <Weather />
+        <RandomFact />
       </div>
-      <div>
-        <BlackHistory />
+      <div className="">
+        <Weather />
       </div>
     </div>
   );

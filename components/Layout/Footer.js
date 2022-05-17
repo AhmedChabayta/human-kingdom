@@ -4,7 +4,9 @@ import React from "react";
 function Footer() {
   return (
     <div className="text-2xl w-screen font-black text-gray-900 absolute bottom-0 space-x-20 flex justify-start items-start bg-orange-500 z-50 p-2 pl-5 shadow-none">
-      <p className="menu-humanity">Humanity</p>
+      <Link href="/">
+        <p className="menu-humanity cursor-pointer">Humanity</p>
+      </Link>
       <div className="relative group">
         <p className="menu-purpose  cursor-pointer">Purpose </p>
         <div className="text-xl flex flex-col invisible transition-all ease-linear group-hover:visible absolute bottom-0 left-0 h-72 w-96 bg-orange-500 p-5 rounded-xl">

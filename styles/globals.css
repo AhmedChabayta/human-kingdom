@@ -5,6 +5,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap");
 
 @layer base {
+  body {
+    @apply bg-gray-900;
+  }
   h2 {
     @apply font-normal;
   }
@@ -12,14 +15,14 @@
     @apply font-black;
   }
   span {
-    @apply font-extrabold;
+    @apply font-extrabold text-blue-500;
   }
 }
 @layer components {
   .menu-humanity {
-    @apply z-50 after:left-0 after:top-0 after:content-['Humanity'] after:absolute relative
-        after:w-0 after:h-full after:bg-clip-text after:text-transparent
-       after:bg-blue-500 hover:after:w-full after:transition-all after:duration-300;
+    @apply z-50 before:left-0 before:top-0 before:content-['Humanity'] before:absolute relative
+        before:w-full before:h-[1px] before:bg-clip-text before:text-transparent
+       before:bg-blue-500 hover:before:h-full before:transition-all before:duration-300;
   }
   .menu-purpose {
     @apply z-50 after:left-0 after:top-0 after:content-['Purpose'] after:absolute relative
@@ -76,9 +79,4 @@ a {
   100% {
     opacity: 0;
   }
-}
-
-.native_name:hover {
-  -webkit-text-stroke-width: 0.2px;
-  -webkit-text-stroke-color: black;
 }

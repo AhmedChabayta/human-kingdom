@@ -1,16 +1,16 @@
 import axios from "axios";
 import { useRouter } from "next/router";
-import Details from "../../components/Details";
-import Sidebar from "../../components/Sidebar";
+import { useEffect, useState } from "react";
+import Details from "../../components/CountriesContent/Details";
+import Sidebar from "../../components/SidebarCountries/Sidebar";
 
 function Countries({ country, namesData }) {
   const countries = country.map((country) => country);
   const router = useRouter();
   const common = router.query.common;
   const query = namesData.map((name) => name.name);
-
   return (
-    <div className="bg-gray-900">
+    <div className="bg-gray-900 h-screen">
       {countries.map(
         ({
           flags,
@@ -31,7 +31,10 @@ function Countries({ country, namesData }) {
           coatOfArms,
           currencies,
         }) => (
-          <div className="flex overflow-hidden h-screen" key={name.official}>
+          <div
+            className={`flex pl-[20%] overflow-hidden h-screen`}
+            key={name.official}
+          >
             <Sidebar
               query={query}
               currencies={currencies}
