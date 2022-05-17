@@ -3,7 +3,6 @@ import { Autocomplete, createFilterOptions, TextField } from "@mui/material";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-
 function Search({ name, names, flags }) {
   return (
     <div className="text-white">
@@ -17,7 +16,7 @@ function Search({ name, names, flags }) {
           return (
             <div
               key={i}
-              className="bg-transparent items-start text-black w-full hover:bg-blue-400 hover:text-white p-5"
+              className="bg-transparent items-start text-['#3B82F6'] w-full hover:bg-blue-400 hover:text-white p-5"
             >
               <Link href={`/Countries/${option.key}`}>
                 <div className="flex flex-col cursor-pointer">
@@ -37,7 +36,7 @@ function Search({ name, names, flags }) {
               placeholder={`${names.official} ...`}
               variant="outlined"
               sx={{
-                backgroundColor: "white",
+                backgroundColor: "#3B82F6",
                 textAlign: "center",
                 display: "flex",
                 width: "full",

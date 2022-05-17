@@ -1,16 +1,17 @@
 import Enter from "../components/Enter";
 import RandomHistoryFact from "../components/Widgets/RandomHistoryFact";
 import Widgets from "../components/Widgets/Widgets";
+import { images } from "../ImageList";
 
 export default function Home() {
   // const countries = data.map((country) => country);
   return (
-    <div className="flex h-[100vh] w-[100vw] bg-gray-900">
+    <div className="flex h-[100vh] w-[100%] bg-gray-900">
       <div className="flex flex-col w-[90vw] ">
         <Enter />
-        <RandomHistoryFact />
+        {/* <RandomHistoryFact /> */}
       </div>
-      <div className="w-[20vw]">
+      <div className="flex items-end">
         <Widgets />
       </div>
     </div>

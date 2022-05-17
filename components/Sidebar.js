@@ -25,7 +25,7 @@ function Sidebar({
   query,
 }) {
   return (
-    <div className="flex p-2 flex-col h-[100vh] w-[20vw] min-w-[20vw] overflow-hidden ">
+    <div className="flex p-2 flex-col h-[100vh] w-[20vw] min-w-[20vw] overflow-hidden fixed left-0">
       <span className="">
         <img className="" src={flags.svg} alt="" />
       </span>

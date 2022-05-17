@@ -15,12 +15,40 @@
     @apply font-extrabold;
   }
 }
+@layer components {
+  .menu-humanity {
+    @apply z-50 after:left-0 after:top-0 after:content-['Humanity'] after:absolute relative
+        after:w-0 after:h-full after:bg-clip-text after:text-transparent
+       after:bg-blue-500 hover:after:w-full after:transition-all after:duration-300;
+  }
+  .menu-purpose {
+    @apply z-50 after:left-0 after:top-0 after:content-['Purpose'] after:absolute relative
+        after:w-0 after:h-full after:bg-clip-text after:text-transparent
+       after:bg-blue-500 hover:after:w-full after:transition-all after:duration-300;
+  }
+  .menu-donate {
+    @apply z-50 after:left-0 after:top-0 after:content-['Donate'] after:absolute relative
+        after:w-0 after:h-full after:bg-clip-text after:text-transparent
+       after:bg-blue-500 hover:after:w-full after:transition-all after:duration-300;
+  }
+  .menu-resources {
+    @apply z-50 after:left-0 after:top-0 after:content-['Resources'] after:absolute relative
+        after:w-0 after:h-full after:bg-clip-text after:text-transparent
+       after:bg-blue-500 hover:after:w-full after:transition-all after:duration-300;
+  }
+  .menu-experiences {
+    @apply z-50 after:left-0 after:top-0 after:content-['Experiences'] after:absolute relative
+        after:w-0 after:h-full after:bg-clip-text after:text-transparent
+       after:bg-blue-500 hover:after:w-full after:transition-all after:duration-300;
+  }
+}
 
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: "Cairo", sans-serif;
+  overflow: hidden;
 }
 a {
   color: inherit;

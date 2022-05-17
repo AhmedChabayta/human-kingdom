@@ -10,7 +10,7 @@ function Countries({ country, namesData }) {
   const query = namesData.map((name) => name.name);
 
   return (
-    <div className="">
+    <div className="bg-gray-900">
       {countries.map(
         ({
           flags,

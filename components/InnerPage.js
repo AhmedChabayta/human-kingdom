@@ -9,7 +9,7 @@ function InnerPage({ flags, name, nativeName, showInstructions }) {
           backgroundImage: `url(${flags})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center center",
-          backgroundSize: "contain",
+          backgroundSize: "cover",
         }}
         className="native_name outline-blue-500 inline-flex hover:text-transparent bg-clip-text self-start text-5xl p-5 font-serif
             pl-10 transition-all duration:200 ease-linear"

@@ -37,8 +37,8 @@ export default function MyClock() {
         hourHandOppositeLength={10}
         minuteHandOppositeLength={20}
         secondHandOppositeLength={0}
-        secondHandLength={100}
-        className="rounded-full text-gray-900 bg-orange-500"
+        secondHandLength={80}
+        className="rounded-full text-gray-900 bg-orange-500 transition-all 250"
         value={value}
       />
     </div>

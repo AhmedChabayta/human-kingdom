@@ -23,7 +23,7 @@ const Accordion = styled((props) => (
 }));
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    sx={{ color: "black", backgroundColor: "white" }}
+    sx={{ color: "rgb(59 130 246)" }}
     expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
     {...props}
   />
@@ -31,7 +31,7 @@ const AccordionSummary = styled((props) => (
   flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
     transform: "rotate(90deg)",
-    color: "black",
+    color: "rgb(59 130 246);",
   },
   "& .MuiAccordionSummary-content": {
     marginLeft: theme.spacing(1),
@@ -41,7 +41,7 @@ const AccordionSummary = styled((props) => (
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
   borderTop: 0,
-  color: "black",
+  color: "rgb(249 115 22)",
 }));
 
 export default function SideItems({
