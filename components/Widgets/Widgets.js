@@ -5,27 +5,21 @@ import { NoSsr } from "@mui/material";
 import Weather from "./Weather";
 import BlackHistory from "./BlackHistory";
 import RandomFact from "./RandomFact";
+import WomenQuotes from "./WomenQuotes";
 
 export default function Widgets() {
   return (
     <div
       className={`overflow-y-scroll overflow-x-hidden flex flex-col h-screen 
-      items-center justify-start min-w-[100%] pb-20 space-y-10`}
+      items-center pr-3 justify-start min-w-[100%] py-20 space-y-10`}
     >
       <NoSsr>
-        <div className="">
-          <DateWidget />
-        </div>
-        <div className="">
-          <Clock />
-        </div>
-      </NoSsr>
-      <div className="">
         <RandomFact />
-      </div>
-      <div className="">
+        <WomenQuotes />
         <Weather />
-      </div>
+        <DateWidget />
+        <Clock />
+      </NoSsr>
     </div>
   );
 }

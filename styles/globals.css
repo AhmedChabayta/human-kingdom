@@ -22,27 +22,27 @@
   .menu-humanity {
     @apply z-50 before:left-0 before:top-0 before:content-['Humanity'] before:absolute relative
         before:w-full before:h-[1px] before:bg-clip-text before:text-transparent
-       before:bg-blue-500 hover:before:h-full before:transition-all before:duration-300;
+       before:bg-orange-500 hover:before:h-full before:transition-all before:duration-300;
   }
   .menu-purpose {
     @apply z-50 after:left-0 after:top-0 after:content-['Purpose'] after:absolute relative
         after:w-0 after:h-full after:bg-clip-text after:text-transparent
-       after:bg-blue-500 hover:after:w-full after:transition-all after:duration-300;
+       after:bg-orange-500 hover:after:w-full after:transition-all after:duration-300;
   }
   .menu-donate {
     @apply z-50 after:left-0 after:top-0 after:content-['Donate'] after:absolute relative
         after:w-0 after:h-full after:bg-clip-text after:text-transparent
-       after:bg-blue-500 hover:after:w-full after:transition-all after:duration-300;
+       after:bg-orange-500 hover:after:w-full after:transition-all after:duration-300;
   }
   .menu-resources {
     @apply z-50 after:left-0 after:top-0 after:content-['Resources'] after:absolute relative
         after:w-0 after:h-full after:bg-clip-text after:text-transparent
-       after:bg-blue-500 hover:after:w-full after:transition-all after:duration-300;
+       after:bg-orange-500 hover:after:w-full after:transition-all after:duration-300;
   }
   .menu-experiences {
     @apply z-50 after:left-0 after:top-0 after:content-['Experiences'] after:absolute relative
         after:w-0 after:h-full after:bg-clip-text after:text-transparent
-       after:bg-blue-500 hover:after:w-full after:transition-all after:duration-300;
+       after:bg-orange-500 hover:after:w-full after:transition-all after:duration-300;
   }
 }
 

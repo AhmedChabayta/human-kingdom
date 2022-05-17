@@ -7,6 +7,7 @@ function Search({ name, names, flags }) {
   return (
     <div className="">
       <Autocomplete
+        style={{ height: "100%", width: "100%" }}
         elevation={0}
         id="free-solo-2-demo"
         options={name.map((option) => option.common)}
@@ -14,7 +15,7 @@ function Search({ name, names, flags }) {
           return (
             <div
               key={i}
-              className="bg-gray-900 items-start text-blue-500 w-full h-full hover:bg-blue-400 hover:text-white p-5"
+              className="bg-gray-900 items-start text-blue-500 w-full h-[100%] hover:bg-blue-400 hover:text-white p-5"
             >
               <Link href={`/Countries/${option.key}`}>
                 <div className="flex flex-col cursor-pointer">
@@ -38,6 +39,7 @@ function Search({ name, names, flags }) {
                 textAlign: "center",
                 display: "flex",
                 width: "full",
+                height: "full",
                 justifyContent: "center",
                 alignItems: "center",
                 margin: "0 auto",

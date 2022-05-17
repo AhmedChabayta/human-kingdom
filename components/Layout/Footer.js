@@ -3,13 +3,19 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="text-2xl w-screen font-black text-gray-900 absolute bottom-0 space-x-20 flex justify-start items-start bg-orange-500 z-50 p-2 pl-5 shadow-none">
+    <div
+      className="text-2xl w-screen font-black text-gray-900 absolute bottom-0
+     space-x-20 flex justify-start items-start bg-blue-500 z-50 p-2 pl-5 shadow-none"
+    >
       <Link href="/">
         <p className="menu-humanity cursor-pointer">Humanity</p>
       </Link>
       <div className="relative group">
         <p className="menu-purpose  cursor-pointer">Purpose </p>
-        <div className="text-xl flex flex-col invisible transition-all ease-linear group-hover:visible absolute bottom-0 left-0 h-72 w-96 bg-orange-500 p-5 rounded-xl">
+        <div
+          className="text-xl flex flex-col invisible transition-all ease-linear
+         group-hover:visible absolute bottom-0 left-0 h-72 w-96 bg-blue-500 p-5 rounded-xl"
+        >
           <p>lorem</p>
           <p>lorem</p>
           <p>lorem</p>
@@ -17,7 +23,10 @@ function Footer() {
       </div>
       <div className="relative group">
         <p className="menu-donate  cursor-pointer">Donate </p>
-        <div className="text-xl flex flex-col invisible transition-all ease-linear group-hover:visible absolute bottom-0 left-0 h-72 w-96 bg-orange-500 p-5 rounded-xl">
+        <div
+          className="text-xl flex flex-col invisible transition-all ease-linear
+         group-hover:visible absolute bottom-0 left-0 h-72 w-96 bg-blue-500 p-5 rounded-xl"
+        >
           <p>lorem</p>
           <p>lorem</p>
           <p>lorem</p>
@@ -25,7 +34,10 @@ function Footer() {
       </div>
       <div className="relative group">
         <p className="menu-resources  cursor-pointer">Resources </p>
-        <div className="text-xl flex justify-between transition-all ease-linear invisible group-hover:visible absolute bottom-10 left-0 h-72 w-fit bg-orange-500 px-5 rounded-t-xl">
+        <div
+          className="text-xl flex justify-between transition-all ease-linear invisible
+         group-hover:visible absolute bottom-12 left-0 h-72 w-fit bg-blue-500 px-5 rounded-xl"
+        >
           <div className="flex flex-col p-5 space-y-5">
             <a href="https://www.wikipedia.org/">
               <p>Wikipedia</p>
