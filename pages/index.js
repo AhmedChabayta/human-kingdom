@@ -9,7 +9,7 @@ export default function Home() {
     <div className="flex h-[100vh] w-[100%] bg-gray-900">
       <div className="flex flex-col w-[90vw] ">
         <Enter />
-        {/* <RandomHistoryFact /> */}
+        <RandomHistoryFact />
       </div>
       <div className="flex items-end">
         <Widgets />
