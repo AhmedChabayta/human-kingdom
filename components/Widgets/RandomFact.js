@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import { Skeleton } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
@@ -27,16 +28,19 @@ function RandomFact() {
     getFact();
     return;
   }, []);
+  console.log(fact);
   return (
     <>
-      {fact
-        ? fact.data.map((item, i) => (
-            <div className="prose prose-invert" key={i}>
-              <h1 className="text-blue-500 text-2xl font-bold">{item.author}</h1>
-              <p className="text-white">"{item.quote}"</p>
-            </div>
-          ))
-        : "Loading"}
+      {fact ? (
+        fact.data.map((item, i) => (
+          <div className="prose prose-invert" key={i}>
+            <h1 className="text-blue-500 text-2xl font-bold">{item.author}</h1>
+            <p className="text-white">"{item.quote}"</p>
+          </div>
+        ))
+      ) : (
+        <Skeleton color="white" variant="text" width={200} height={200} />
+      )}
     </>
   );
 }

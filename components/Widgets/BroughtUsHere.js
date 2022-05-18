@@ -1,13 +1,13 @@
 import React from "react";
-import quotes from "../../womenQuotes.json";
+import influences from "../../influental.json";
 
-function WomenQuotes() {
-  const data = quotes.map(({ i, author, quote, image }) => {
+function BroughtUsHere() {
+  const data = influences.map(({ i, author, quote, image }) => {
     return (
       <div className="" key={i}>
+          <h1 className='text-blue-500 text-3xl'>The ones who brought us here</h1>
         <img title={author} src={image} alt="" />
         <p className="text-blue-500 text-2xl font-bold">{author}</p>
-        <p className="text-white">{quote}</p>
       </div>
     );
   });
@@ -18,4 +18,4 @@ function WomenQuotes() {
   );
 }
 
-export default WomenQuotes;
+export default BroughtUsHere;

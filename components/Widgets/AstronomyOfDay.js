@@ -26,7 +26,7 @@ function AstronomyOfDay() {
       {astron ? (
         <div className="prose prose-invert">
           <span>
-            <small>Astronomy of the day</small>
+            <h2 className='text-3xl text-blue-500'>Astronomy of the day</h2>
             <img className="" title={astron.title} src={astron.url} alt="" />
           </span>
           <span className="">

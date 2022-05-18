@@ -7,6 +7,7 @@ import BlackHistory from "./BlackHistory";
 import RandomFact from "./RandomFact";
 import WomenQuotes from "./WomenQuotes";
 import AstronomyOfDay from "./AstronomyOfDay";
+import BroughtUsHere from './BroughtUsHere';
 
 export default function Widgets() {
   return (
@@ -17,6 +18,7 @@ export default function Widgets() {
       <NoSsr>
         <RandomFact />
         <WomenQuotes />
+        <BroughtUsHere />
         <AstronomyOfDay />
         <Weather />
         <DateWidget />
