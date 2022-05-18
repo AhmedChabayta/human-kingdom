@@ -21,7 +21,7 @@ function Footer() {
           <p>lorem</p>
         </div>
       </div>
-      <div className="relative group">
+      <div className="relative">
         <p className="menu-donate  cursor-pointer">Donate </p>
         <div
           className="text-xl flex flex-col invisible transition-all ease-linear
@@ -33,7 +33,7 @@ function Footer() {
         </div>
       </div>
       <div className="relative group">
-        <p className="menu-resources  cursor-pointer">Resources </p>
+        <p className="menu-resources cursor-pointer">Resources</p>
         <div
           className="text-xl flex justify-between transition-all ease-linear invisible
          group-hover:visible absolute bottom-12 left-0 h-72 w-fit bg-blue-500 px-5 rounded-xl"
@@ -52,9 +52,8 @@ function Footer() {
               <p>RestCountries</p>
             </a>
           </div>
-          <div className="h-full flex flex-col self-start justify-self-center w-1 bg-gray-900 mx-3" />
-          <div className="flex flex-col p-5 space-y-5 whitespace-nowrap cursor-pointer">
-            <p>MORE LINKS</p>
+          <div className="flex flex-col p-5 space-y-5 whitespace-nowrap cursor-pointer ">
+            <p className="">MORE LINKS</p>
             <p>MORE LINKS</p>
             <p>MORE LINKS</p>
           </div>

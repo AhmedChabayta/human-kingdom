@@ -7,8 +7,9 @@ export default function Home() {
   // const countries = data.map((country) => country);
   return (
     <div className="flex h-[100vh] w-[100%] bg-gray-900">
-      <div className="flex flex-col w-[90vw] ">
+      <div className="flex flex-col h-screen w-[90vw] overflow-scroll pb-20 scrollbar-hide">
         <Enter />
+        <p className="pl-1 text-5xl text-orange-500">Using Wikipedia </p>
         <RandomHistoryFact />
       </div>
       <div className="flex items-end">

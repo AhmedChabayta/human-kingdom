@@ -31,12 +31,9 @@ function RandomFact() {
     <>
       {fact
         ? fact.data.map((item, i) => (
-            <div
-              className="flex flex-col items-start justify-start w-[20vw]"
-              key={i}
-            >
-              <h1 className="text-blue-500 text-4xl">{item.author}</h1>
-              <p className="text-lg text-white text-left">"{item.quote}"</p>
+            <div className="prose prose-invert" key={i}>
+              <h1 className="text-blue-500 text-2xl font-bold">{item.author}</h1>
+              <p className="text-white">"{item.quote}"</p>
             </div>
           ))
         : "Loading"}
