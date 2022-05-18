@@ -58,7 +58,7 @@ function RandomHistoryFact() {
             </p>
           </div>
         ) : (
-          <Skeleton variant="rectangular" width={800} height={300} />
+          <Skeleton variant="lines" width={800} height={300} />
         )}
       </div>
     </div>

@@ -5,6 +5,7 @@ function WomenQuotes() {
   const data = quotes.map(({ i, author, quote, image }) => {
     return (
       <div className="" key={i}>
+        <h2 className="text-blue-500">Pioneers of feminism</h2>
         <img title={author} src={image} alt="" />
         <p className="text-blue-500 text-2xl font-bold">{author}</p>
         <p className="text-white">{quote}</p>

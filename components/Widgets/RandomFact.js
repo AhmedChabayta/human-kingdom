@@ -4,7 +4,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 function RandomFact() {
-  const [fact, setFact] = useState();
+  const [fact, setFact] = useState(false);
   const getFact = () => {
     const options = {
       url: "https://api.api-ninjas.com/v1/quotes?category=history",
@@ -34,12 +34,18 @@ function RandomFact() {
       {fact ? (
         fact.data.map((item, i) => (
           <div className="prose prose-invert" key={i}>
+            <h2 className='text-blue-500'>Todays Quote: </h2>
             <h1 className="text-blue-500 text-2xl font-bold">{item.author}</h1>
-            <p className="text-white">"{item.quote}"</p>
+            <p className="text-white text-lg italic">"{item.quote}"</p>
           </div>
         ))
       ) : (
-        <Skeleton color="white" variant="text" width={200} height={200} />
+        <Skeleton
+          className="bg-orange-500"
+          variant="text"
+          width={200}
+          height={200}
+        />
       )}
     </>
   );

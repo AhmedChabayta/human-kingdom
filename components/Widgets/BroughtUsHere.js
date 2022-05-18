@@ -4,8 +4,8 @@ import influences from "../../influental.json";
 function BroughtUsHere() {
   const data = influences.map(({ i, author, quote, image }) => {
     return (
-      <div className="" key={i}>
-          <h1 className='text-blue-500 text-3xl'>The ones who brought us here</h1>
+      <div className="w-full" key={i}>
+          <h2 className='text-blue-500'>The ones who brought us here</h2>
         <img title={author} src={image} alt="" />
         <p className="text-blue-500 text-2xl font-bold">{author}</p>
       </div>

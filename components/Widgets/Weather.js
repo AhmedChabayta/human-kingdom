@@ -27,7 +27,7 @@ function Weather() {
         onChange={(event) => setCity(event.target.value)}
         onKeyPress={getWeather}
         placeholder="Search Weather"
-        className="text-orange-500 bg-transparent rounded-2xl p-2 px-4 placeholder:text-blue-500/30 placeholder:text-xl text-center focus:outline-none"
+        className="text-orange-500 bg-transparent rounded-2xl p-2 px-4 placeholder:text-blue-500/50 placeholder:text-xl text-center focus:outline-none"
       />
       {typeof weatherData.main === "undefined" ? (
         " "
