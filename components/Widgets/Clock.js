@@ -32,13 +32,13 @@ export default function MyClock() {
         renderNumbers={showNumbers}
         draggable="false"
         size={size}
-        hourHandWidth={3}
+        hourHandWidth={2}
         hourMarksWidth={2}
         hourHandOppositeLength={10}
-        minuteHandOppositeLength={20}
+        minuteHandOppositeLength={15}
         secondHandOppositeLength={0}
-        secondHandLength={80}
-        className="rounded-full text-gray-900 bg-orange-500 transition-all 250"
+        secondHandLength={50}
+        className="rounded-full text-white bg-orange-500 transition-all ease-linear 250"
         value={value}
       />
     </div>

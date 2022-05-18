@@ -33,7 +33,7 @@ function AstronomyOfDay() {
             <p className="text-2xl"> {astron.copyright}</p>
             <small>{astron.date}</small>
           </span>
-          <p className="">By {astron.explanation}</p>
+          <p className="text-lg">By {astron.explanation}</p>
         </div>
       ) : (
         ""

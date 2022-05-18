@@ -21,7 +21,7 @@ function RandomHistoryFact() {
   const facts = fact ? fact.events : null;
   const entries = fact
     ? facts.map((entry, id) => (
-        <div className="flex flex-col text-white" key={entry.year}>
+        <div className="flex flex-col text-white w-full" key={entry.year}>
           <div className="flex text-9xl text-orange-500 font-sans">
             {entry.year}
           </div>
